@@ -7,7 +7,7 @@ public class Ejercicio28 {
 		Scanner entrada=new Scanner(System.in);
 		float radians, sine,cosine,tangente;
 		radians=30*Math
-		System.out.printf("Degrees \tRadians \tSine \tCosine \tTangente");
+		System.out.printf("Degrennes \tRadians \tSine \tCosine \tTangente");
 		System.out.printf("30\t\t  %f\t\t %f\t\t  %f\t\t %f\t\t", radians,sine,cosine,tangente);
 	}
 
