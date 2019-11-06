@@ -6,7 +6,7 @@ public class buclechar {
 		Scanner input=new Scanner(System.in);
 		char continueLoop= 'Y';
 		while (continueLoop=='Y'){
-			System.out.println("Introduce Y para seguir N para parar");
+			System.out.println("Introduce aaaaaaa Y para seguir N para parar");
 			continueLoop= input.next().charAt(0);
 			}
 		
