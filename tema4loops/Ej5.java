@@ -7,7 +7,13 @@ public class Ej5 {
 		num=entrada.nextInt();
 		max=num;
 		while (num!=0) {
+			System.out.println("introduzca el segundo numero");
 			num=entrada.nextInt();
+			if (num>max) {
+				max=num;
+			}
+			System.out.println("max es "+ max);
+			System.out.println("num " + num);
 		}
 	}
 
