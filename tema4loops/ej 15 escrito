@@ -1,2 +1,4 @@
 15 // se imprime una vez 10+10, aumentan las variables dentro de sus bucles 
 hasta 10 y luego imprime 10*10
+16) a. imprime j que vale 0,1,2,3,4
+	b. imprime a partir de j=i=2 
