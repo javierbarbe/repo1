@@ -1,4 +1,4 @@
-package cocheClasePaquete;
+
 
 public class Ej18 {
 
