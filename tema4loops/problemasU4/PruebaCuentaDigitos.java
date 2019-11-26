@@ -1,12 +1,18 @@
 package problemasU4;
+//import java.math.BigDecimal;
 import java.util.Scanner;
 public class PruebaCuentaDigitos {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		int q,num;
-		double doub;
-		Scanner entrada=new Scanner(System.in);
+		int cantidad,q,num;
+	//	double doub;
+		 CuentaDigitos doub= new CuentaDigitos();
+		 
+		cantidad=(int) doub.toString().length();
+		 System.out.println(cantidad);
+		 
+		//Scanner entrada=new Scanner(System.in);
 	/*	num=entrada.nextInt();
 		
 		CuentaDigitos cd= new CuentaDigitos(num);
@@ -16,12 +22,17 @@ public class PruebaCuentaDigitos {
 		q=entrada.nextInt();
 		cd2.setNum(q);
 		cd2.contador();*/
-		doub=entrada.nextDouble();
-		CuentaDigitos cdb=new CuentaDigitos(doub);
+		//doub=entrada.nextDouble();
+		//CuentaDigitos cdb=new CuentaDigitos(doub);
 		//cdb.setDoub(grande);
-		System.out.println(cdb.getDoub());
+		
+    /*  double nume = (int) doub;
+    nume = (double) nume;
+      doub-=nume;
+		System.out.println(doub);
+		//System.out.println(cdb.getDoub());
 		//cdb.contadouble();
-		cdb.contadouble();
+		//cdb.contadouble();*/
 	}
 
 }

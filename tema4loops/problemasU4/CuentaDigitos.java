@@ -1,9 +1,9 @@
 package problemasU4;
-
+import java.util.Scanner;
 public class CuentaDigitos {
-private int  b,a, num;
-private double doub;
-	public CuentaDigitos() {}
+private int  b,a, num,entero;
+private double decimal,doub;
+	//public CuentaDigitos() {}
 	
 	public  CuentaDigitos (int num) {
 		this.num=num;
@@ -19,12 +19,31 @@ private double doub;
 			this.num=num/10;
 		}System.out.println(a);
 	}
-	public void  contadouble() { 			 // este metodo igual que el anterior me da unos resultados muy extraños
-											// PARA UN NUMERO EJ. 6=> doub=325... no entiendo porqué
-		for ( b=1; doub/10!=0.0;b++) {
-			this.doub=doub/10;
-		} System.out.println(b);;
+	public   CuentaDigitos() { 
+		Scanner entrada=new Scanner(System.in);
+		System.out.println("numero double");
+		this.decimal=entrada.nextDouble();
+		
+		this.entero= (int)this.decimal;
+		this.decimal-=this.entero;
+		
+		Math.round(this.decimal);
+		System.out.println("parte entera "+this.entero+ "\nParte decimal "+ this.decimal);
 	}
+		
+												
+		
+		
+		
+		
+		
+		
+												// este metodo igual que el anterior me da unos resultados muy extraños
+											// PARA UN NUMERO EJ. 6=> doub=325... no entiendo porqué
+		//for ( b=1; doub/10!=0.0;b++) {
+	//		this.doub=doub/10;
+	//	} System.out.println(b);;
+//	}
 	public int getNum() {
 		return num;
 	}
