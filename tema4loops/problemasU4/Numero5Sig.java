@@ -27,10 +27,12 @@ public class Numero5Sig {
 				
 		for(long numerosiguiente=nume+1; numerosiguiente<=nume+5;numerosiguiente++)
 		{
-			while ( u<=numerosiguiente) {
+			for (int u=1; u<=numerosiguiente;u++) {
 			if(numerosiguiente%u==0)	{
 				contador2++;
-			}u++;
+			}
+			
+			
 			
 			}if(contador2<=2) {
 				System.out.println(numerosiguiente+" es primo");
@@ -40,7 +42,7 @@ public class Numero5Sig {
 		}
 		}
 	}
-	
+
 			
 			//System.out.println(b);
 				/*	 for (int t=1;t<=this.b;t++) 
