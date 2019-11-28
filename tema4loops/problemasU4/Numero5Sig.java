@@ -38,7 +38,7 @@ public class Numero5Sig {
 				System.out.println(numerosiguiente+" es primo");
 			}else {
 				System.out.println(numerosiguiente+" no es primo");
-				  }
+				  }contador2=0; // la PUTA CLAVEEEEEEEEEEEEEEEEEEEEEEEEE
 		}
 		}
 	}
