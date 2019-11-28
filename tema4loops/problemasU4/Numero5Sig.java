@@ -4,7 +4,8 @@ public class Numero5Sig {
 	private int u=1,contador,contador2;
 	private long b,nume;
 	
-	public Numero5Sig() {
+	public Numero5Sig() {}
+	public void compruebaNumero{
 		Scanner entrada=new Scanner(System.in);
 		System.out.println("introduce numero positivo y veremos sus cinco siguientes");
 		this.nume=entrada.nextLong();
