@@ -5,7 +5,7 @@ public class Numero5Sig {
 	private long b,nume;
 	
 	public Numero5Sig() {}
-	public void compruebaNumero{
+	public void cuentaSig() {
 		Scanner entrada=new Scanner(System.in);
 		System.out.println("introduce numero positivo y veremos sus cinco siguientes");
 		this.nume=entrada.nextLong();

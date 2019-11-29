@@ -5,7 +5,8 @@ private int sumatorio,contador;
 private long num; 
 	//public Pares() {}
 	
-	public  Pares() {
+	public  Pares() {}
+	public void miraPar() {
 	Scanner entrada=new Scanner(System.in); 
 	num=entrada.nextLong();
 	while(num<0) 

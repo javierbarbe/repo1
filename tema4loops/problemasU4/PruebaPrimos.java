@@ -6,6 +6,7 @@ public class PruebaPrimos {
 		// TODO Auto-generated method stub
 
 		Primos ty= new Primos();
+		ty.pruebaPrimos();
 	}
 
 }

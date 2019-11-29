@@ -6,6 +6,7 @@ public class PruebaPositivos {
 		// TODO Auto-generated method stub
 
 		PositivosN grupo= new PositivosN();
+		grupo.cuentaPositivos();
 	}
 
 }

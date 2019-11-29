@@ -1,10 +1,11 @@
 package problemasU4;
 import java.util.Scanner;
 public class PositivosN {
-double num, negativos,positivos;
-int total=0;
+private double num, negativos,positivos;
+private int total=0;
 	public PositivosN() 
-	{
+	{}
+	public void cuentaPositivos() {
 	 Scanner entrada=new Scanner(System.in);
 	while (total<10) 
 		{

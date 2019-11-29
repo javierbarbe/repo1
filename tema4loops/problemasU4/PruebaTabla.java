@@ -10,7 +10,7 @@ public class PruebaTabla {
 		num=entrada.nextInt();
 		Tabla t1=new Tabla(num);
 		t1.imprimeTablaScanner();
-		//t1.tablaValorNecesario(5);
+		t1.tablaValorNecesario(5);
 		System.out.println("introduce un numero para ver su tabla de multiplicar");
 		a=entrada.nextInt();
 		Tabla t2=new Tabla(a);

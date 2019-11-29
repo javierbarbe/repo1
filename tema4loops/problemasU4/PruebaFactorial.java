@@ -6,12 +6,12 @@ public class PruebaFactorial {
 		// TODO Auto-generated method stub
 
 		Factorial f=new Factorial();
-		Factorial q= new Factorial(44);
-		System.out.println(q.getNumero());
-		q.setFactorial(4);
-		q.setNumero(14);
+		Factorial q= new Factorial();
+		
+		
+		//System.out.println(q.getFactorial());
+		q.buscaFactorial();
 		System.out.println(q.getFactorial());
-		System.out.println(q.getNumero());
 	}
 
 }

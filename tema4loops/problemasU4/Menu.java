@@ -6,6 +6,13 @@ public class Menu {
 	public Menu(){
 		
 	}
+	public void dibujaMenu() {
+		System.out.println("#####CALCULADORA 100TIFICA######");
+		System.out.println("1. Calcula numeros primos entre dos positivos dados");
+		System.out.println("2. Calcula x de la ecuacion 4x+3=0");
+		System.out.println("3. Calcula el tiempo que tarda un objeto en caer\n   al suelo desde una altura h");
+		System.out.println("4. Salir del programa");
+	}
 	public void calculaX() {
 		double x;
 		System.out.println("sea a=4 y b=3");
@@ -70,12 +77,3 @@ public class Menu {
 }
 }
 
-
-/*for (t=1;t<=a;t++) 
-				{
-					if(	a%t==0) 
-					{
-					count++;
-					}
-					t++;
-					}t=1;*/

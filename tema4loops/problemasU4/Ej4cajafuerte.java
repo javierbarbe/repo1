@@ -20,7 +20,6 @@ while(intentos<4) {
 
 if(cifra<=9999) {
 caja.numero4Digitos(cifra);	
-caja.getNumero2();
 }
 else {
 System.out.println("Numero no valido, solo 4 cifras");

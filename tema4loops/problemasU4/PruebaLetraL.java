@@ -6,6 +6,9 @@ public class PruebaLetraL {
 		// TODO Auto-generated method stub
 		
 		LetraL let=new LetraL();
+		let.dibujaLetra();
+		let.setAltura(3);
+		let.dibujaLetra2(let.getAltura());
 
 	}
 

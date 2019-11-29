@@ -3,8 +3,9 @@ import java.util.Scanner;
 public class BaseExponente {
 	double base;
 	int exponente;
-public BaseExponente()
-{
+public BaseExponente(){}
+
+public void calculaBaseExponente(){
 	
 	Scanner entrada=new Scanner(System.in);
 	

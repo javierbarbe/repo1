@@ -6,6 +6,7 @@ int longitud;
 		// TODO Auto-generated method stub
 			System.out.println("Introduce numero positivo");
 			Pares par= new Pares();
+			par.miraPar();
 			//System.out.println(par.toString().length());
 	}
 

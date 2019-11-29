@@ -4,8 +4,9 @@ public class Piramide {
 int altura, espacios, alturadada;
 char caracter;
 	public Piramide() 
-	{
-		Scanner entrada= new Scanner(System.in);
+	{}
+	public void pintaPiramide() {
+	Scanner entrada= new Scanner(System.in);
 		
 		
 		System.out.println("Introduzca altura");

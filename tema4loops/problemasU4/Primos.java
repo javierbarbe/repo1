@@ -3,10 +3,11 @@ import java.util.Scanner;
 public class Primos {
 
 	//atributos
-	double n, contador;
+	private double n, contador;
 	
 	
-	public Primos() {
+	public Primos() {}
+	public void pruebaPrimos() {
 		Scanner entrada=new Scanner(System.in);
 		System.out.println("Introduzca el numero que quiera comprobar si es primo");
 		n=entrada.nextDouble();

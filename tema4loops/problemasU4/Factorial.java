@@ -1,11 +1,13 @@
 package problemasU4;
 import java.util.Scanner;
 public class Factorial {
-	long num,numero, factorial=1;
+	private long num,numero, factorial=1;
 	
 	
 	public Factorial() 
-	{
+	{}
+	
+	public void buscaFactorial() {
 		Scanner entrada= new Scanner(System.in);
 		
 		System.out.println("Introduce un n para hacer el factorial");
@@ -22,7 +24,7 @@ public class Factorial {
 				}
 	}
 	
-	public  Factorial(long numero) {
+	public void Factoria() {
 	this.numero=7;
 	}
 
@@ -30,16 +32,9 @@ public class Factorial {
 		return numero;
 	}
 
-	public void setNumero(long numero) {
-		this.numero = numero;
-	}
-
 	public long getFactorial() {
 		return factorial;
 	}
 
-	public void setFactorial(long factorial) {
-		this.factorial = factorial;
-	}
 	
 }
