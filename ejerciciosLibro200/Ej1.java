@@ -1,4 +1,4 @@
-package arraysLibroJava200;
+package ejerciciosLibro200;
 
 import java.util.Scanner;
 
@@ -41,14 +41,47 @@ public void albertito() {
 	int i;
 	int [] alberto = new int [9];
 	
-	for( i=8; i>0; i--) {
-		System.out.println("Introduce un numero");
+	for( i=8; i>=0; i--) {
+		System.out.println("Introduce un nmero");
 		alberto [i]= e.nextInt();
 		
+		System.out.println(alberto[i]);
+	}
+	 for( int n: alberto) {
+		 System.out.print(n+" ");
+	 }
+	/*System.out.print(alberto[2]);
+	
+	System.out.print(alberto[1]);
+	System.out.print(alberto[0]);*/
+	 
+	 
+		 
+	 }
+
+public void ej4() {
+	
+	int[] numero= new int [20];
+	double[] cuadrado= new double [20];
+	double [] cubo= new double [20];
+	
+	for (int i=0; i<numero.length; i++) {
+		numero[i]= (int) (Math.random()*101);
+		cuadrado[i]= numero[i]*numero[i];
+		cubo[i]=numero[i]*numero[i]* numero[i];
 		
-	}System.out.print(alberto[i]);
-	
-	
+		
+	}	 for (int t=0;t<numero.length;t++) {
+		 System.out.printf("%4d   %.0f  %6.0f \n", numero[t],cuadrado[t], cubo[t]);
+	/*for (int n:numero) {
+		System.out.print(n+" ");
+	}*/
+
+
+	 }
 }
+	 
 
 }
+
+
