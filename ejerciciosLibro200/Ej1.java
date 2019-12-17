@@ -6,6 +6,8 @@ public class Ej1 {
 	
 	Scanner e  = new Scanner(System.in);
 		 int p;
+		 
+		 
 	public void array11() {
 	int [] num= new int [12];
 	
@@ -78,10 +80,68 @@ public void ej4() {
 	}*/
 
 
-	 }
-}
+		}
+	}
 	 
-
+ public void ej5() {
+	 
+	int max, min;
+	 
+	 int[] cinco= new int[3];
+	  
+	  
+	 System.out.println("Introduce diez numeros");
+	 
+	 for(int a=0; a<cinco.length; a++) {
+		 do {
+		
+			 System.out.println("posicion " +(a+1));
+			 cinco[a]=e.nextInt();
+			 a++;
+		 }while (a<cinco.length);
+			 }
+	 max= min= cinco[0];
+  for( int w=0; w<cinco.length;w++) {
+	  
+	  if(max< cinco[w]) {
+		  max=cinco[w];
+	  }
+	  
+	  if (min>cinco[w]) {
+		  min = cinco[w];
+	  }
+	  
+  } 
+  System.out.println("El maximo valor es: "+ max+ "\nEl minimo valor es: "+min);
+ 
+ 	}
+	 
+	 public void rota() {
+		 
+		 int [] rotador = new int [10]; 
+		 
+		 for ( int n=0; n< rotador.length;n++) {
+			 System.out.println("Introduce un numero");
+			rotador[n]= e.nextInt();
+			
+			 	 }
+		 for (int n: rotador) {
+		 System.out.print(n+ " ");
+		 
+	
+		
+	 }System.out.println();
+		 int [] rotado= new int[rotador.length];
+		 int ultimo= rotador[rotador.length-1];
+ 	for( int q=rotador.length-1; q>0; --q) {
+ 		
+ 		rotado[q]= rotador[q-1];
+ 	}
+ 	rotado[0]= ultimo;
+ for (int t: rotado) {
+	 System.out.print(t+ " ");
+ }
+}
 }
 
 

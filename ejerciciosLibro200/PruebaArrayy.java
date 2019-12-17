@@ -14,7 +14,12 @@ public class PruebaArrayy {
 		
 			//pr.arrayCaract();
 			//pr.albertito();
-	pr.ej4();
+	//pr.ej4();
+	Buscaminas ty = new Buscaminas();
+	//ty.juego();
+	
+	//pr.ej5();
+	pr.rota();
 			}
 
 }
