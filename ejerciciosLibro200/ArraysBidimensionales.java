@@ -7,7 +7,10 @@ public class ArraysBidimensionales {
 
 		ArraysBiEjercicios pr= new ArraysBiEjercicios();
 		//pr.ej1();
-		pr.ej2();
+		pr.ej2Bis();
 	}
+
+	
+	
 
 }
