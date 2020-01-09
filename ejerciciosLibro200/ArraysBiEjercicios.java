@@ -141,5 +141,106 @@ public void ej2() {
 	
 
 			   }
+public void ej2Bis() {
+	int sumaFila=0,sumaColumna=0; // sumaTotal=0; esta variable no la resuelvo bien
+	int [] [] matriz= new int [4][5];
+	for (int fila=0; fila<matriz.length;fila++) {
+		sumaFila=0;
+		for (int columna=0;columna < matriz[0].length; columna++) {
+			if (columna==matriz[0].length-1) {
+				matriz[fila][columna]=sumaFila;
+			}else{
+				
+				matriz[fila][columna]=(int)(Math.random()*4);
+				sumaFila+=matriz[fila][columna];
+				//sumaTotal+=matriz[fila][columna]; esto no lo coge bien
+			}
+		}
+	}// fin del recorrido para rellenar la matriz
+	for (int columna=0;columna<matriz[0].length;columna++) {
+		sumaColumna=0;
+		for (int fila=0; fila<matriz.length;fila++) {
+			if(fila==matriz.length-1) {
+				matriz[fila][columna]=(sumaColumna);
+				if(columna==matriz[0].length-1) {
+					matriz[fila][columna]=(sumaColumna*2); // aqui si pongo sumaFila o columna *2 da bien, si por el contrario, 
+															// las sumo da error
+				}
+			}else {
+				sumaColumna+=matriz[fila][columna];
+			}
+		}
+	}
+	
+	
+	for (int i=0; i<matriz.length;i++) {
+		for (int j=0;j<matriz[0].length;j++) {
+			System.out.printf("%7d", matriz[i][j]);
+		}System.out.println();
+	}// fin de imprimir matriz
+} // fin del ejercicio 2 Bis
+
+public void ej4()	
+		throws InterruptedException  {
+	
+/*Modifica el programa anterior de tal forma que las sumas parciales y la suma
+total aparezcan en la pantalla con un pequeño retardo, dando la impresión de
+que el ordenador se queda “pensando” antes de mostrar los números.*/
+	
+	
+	int [] [] matriz4= new int [4] [5];
+	int sumaDerecha=0, sumaColumna=0, sumaTotal=0;
+	for (int fila=0; fila<matriz4.length;fila++) {
+		sumaDerecha=0;
+		for (int columna=0;columna<matriz4[0].length;columna++) {
+			if(columna<matriz4[0].length-1) {
+				matriz4[fila][columna]=(int)(Math.random()*4);
+				sumaDerecha+=matriz4[fila][columna];
+				sumaTotal+=matriz4[fila][columna];
+			}else {
+				matriz4[fila][columna]=sumaDerecha;
+				//sumaTotal+=matriz4[fila][columna];
+			} //fin else 
+		}//fin del for columnas dentro de filas
+	}// fin del for filas para rellenar la matriz
+	for( int columna=0;columna<matriz4[0].length;columna++) {
+		sumaColumna=0;
+		for(int fila=0;fila<matriz4.length;fila++) {
+			if(fila<matriz4.length-1) {
+				sumaColumna+=matriz4[fila][columna];
+				sumaTotal+=matriz4[fila][columna];
+			}else {
+				if(columna==matriz4[0].length-1) {
+					matriz4[fila][columna]=sumaColumna*2;
+				}else {
+				matriz4[fila][columna]=sumaColumna;
+				}
+			}
+		}// fin condicion para sumar solo la columna correspondiente
+			 //
+				
+			//}
+				
+			
+		//fin for fila 2 buccle anidado
+	}//fin for columna 2 bucle anidado
+	
+	for (int fila=0; fila<matriz4.length;fila++) {
+		
+		for (int columna=0;columna<matriz4[0].length;columna++) {
+			System.out.printf("%7d", matriz4[fila][columna]);
+			Thread.sleep(200);
+		}System.out.println();
+		Thread.sleep(500);
+	}
+	
+}// fin del ejercicio 4
+
+
+
+
+
+
+
 
 }// fin de la clase
