@@ -4,8 +4,8 @@ public class ArraysBiEjercicios {
 Scanner e=new Scanner(System.in);
 	
 	public void ej1() {
-		/*Define un array de n˙meros enteros de 3 filas por 6 columnas con nombre num
-y asigna los valores seg˙n la siguiente tabla. Muestra el contenido de todos
+		/*Define un array de n√∫meros enteros de 3 filas por 6 columnas con nombre num
+y asigna los valores seg√∫n la siguiente tabla. Muestra el contenido de todos
 los elementos del array dispuestos en forma de tabla como se muestra en la
 figura.*/
 		
@@ -66,9 +66,9 @@ figura.*/
 	
 	
 public void ej2() {
-	/*Escribe un programa que pida 20 n˙meros enteros. Estos n˙meros se deben
-	introducir en un array de 4 filas por 5 columnas. El programa mostrar· las
-	sumas parciales de filas y columnas igual que si de una hoja de c·lculo se
+	/*Escribe un programa que pida 20 n√∫meros enteros. Estos n√∫meros se deben
+	introducir en un array de 4 filas por 5 columnas. El programa mostrar√° las
+	sumas parciales de filas y columnas igual que si de una hoja de c√°lculo se
 	tratara. La suma total debe aparecer en la esquina inferior derecha.*/
 	System.out.println("ola");
 	int po,i=0,j=0, sumaderecha=0,sumaderechaFINAL=0;
@@ -184,8 +184,8 @@ public void ej4()
 		throws InterruptedException  {
 	
 /*Modifica el programa anterior de tal forma que las sumas parciales y la suma
-total aparezcan en la pantalla con un pequeÒo retardo, dando la impresiÛn de
-que el ordenador se queda ìpensandoî antes de mostrar los n˙meros.*/
+total aparezcan en la pantalla con un peque√±o retardo, dando la impresi√≥n de
+que el ordenador se queda ‚Äúpensando‚Äù antes de mostrar los n√∫meros.*/
 	
 	
 	int [] [] matriz4= new int [4] [5];
@@ -237,7 +237,51 @@ que el ordenador se queda ìpensandoî antes de mostrar los n˙meros.*/
 }// fin del ejercicio 4
 
 
-
+public void ej5() {
+		/*Ejercicio 5
+		Realiza un programa que rellene un array de 6 filas por 10 columnas con
+		n√∫meros enteros positivos comprendidos entre 0 y 1000 (ambos incluidos).
+		A continuaci√≥n, el programa deber√° dar la posici√≥n tanto del m√°ximo como
+		del m√≠nimo.*/
+		
+		int [] [] matriz = new int [6][10];
+		int maximo=0, min=1000,posicionMax=0, posicionMin=0,posicionMinFin=0,posicionFinMax=0;
+		for (int fila=0; fila<matriz.length;fila++) {
+			for(int columna=0;columna<matriz[0].length;columna++) {
+				matriz[fila][columna]=(int)(Math.random()*1001);
+				if(matriz[fila][columna]>maximo) {
+					maximo=matriz[fila][columna];
+					
+				}
+				if(matriz[fila][columna]<min) {
+					min=matriz[fila][columna];
+					
+				}
+			}
+			
+		} // fin del for para rellenar y saber max y minimo
+		for (int fila=0; fila<matriz.length;fila++) {
+			for(int columna=0;columna<matriz[0].length;columna++) {
+				System.out.printf("%5d" ,matriz[fila][columna]);
+				if(matriz[fila][columna]!=maximo) {
+					posicionMax++;
+				}else {
+					 posicionFinMax=posicionMax;
+				}
+				if(matriz[fila][columna]!=min) {
+					posicionMin++;
+				}else {
+					 posicionMinFin=posicionMin;
+				}
+			}System.out.println();
+		}
+		System.out.println(min+" Posicion del minimo "+(posicionMinFin+1));
+		System.out.println(maximo+" Posicion del maximo "+(posicionFinMax+1 ));
+		
+	}// fin ejercicio 5
+	
+	
+} //fin de la calse principal
 
 
 
