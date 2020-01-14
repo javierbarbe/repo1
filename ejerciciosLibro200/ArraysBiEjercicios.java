@@ -279,7 +279,117 @@ public void ej5() {
 		System.out.println(maximo+" Posicion del maximo "+(posicionFinMax+1 ));
 		
 	}// fin ejercicio 5
+
 	
+	public void ej6() { //inacabado
+	/*Modifica el programa anterior de tal forma que no se repita ningún número en
+	el array.*/
+	int [] [] matriz = new int [6][10];
+	int maximo=0, min=1000,posicionMax=0, posicionMin=0,posicionMinFin=0,posicionFinMax=0;
+	for (int fila=0; fila<matriz.length;fila++) {
+		for(int columna=0;columna<matriz[0].length;columna++) {
+			matriz[fila][columna]=(int)(Math.random()*10);
+			int numNoRepe=matriz[fila][columna];
+			
+				for (int i=0; i<matriz.length;i++) {
+				
+					for (int j=0;j<matriz[0].length;j++) {
+						while(numNoRepe==matriz[i][j]) {
+							matriz[fila][columna]=(int)(Math.random()*51);
+						}
+				}
+			}
+			
+			
+			
+			if(matriz[fila][columna]>maximo) {
+				maximo=matriz[fila][columna];
+				
+			}
+			if(matriz[fila][columna]<min) {
+				min=matriz[fila][columna];
+				
+			}
+		}
+		
+	} // fin del for para rellenar y saber max y minimo
+	for (int fila=0; fila<matriz.length;fila++) {
+		for(int columna=0;columna<matriz[0].length;columna++) {
+			System.out.printf("%5d" ,matriz[fila][columna]);
+			if(matriz[fila][columna]!=maximo) {
+				posicionMax++;
+			}else {
+				 posicionFinMax=posicionMax;
+			}
+			if(matriz[fila][columna]!=min) {
+				posicionMin++;
+			}else {
+				 posicionMinFin=posicionMin;
+			}
+		}System.out.println();
+	}
+	System.out.println(min+" Posicion del minimo "+(posicionMinFin+1));
+	System.out.println(maximo+" Posicion del maximo "+(posicionFinMax+1 ));
+	
+}// fin ej6
+
+public void ej7() { //INACABADO
+	/* Mejora el ejercicio de la busqeda del tesoro de tal manera que si el tesoro esta a una casilla de distancia
+	 * 	te lo diga un aviso "CUIDADO EL TESORO ESTA CERCA"
+	 */
+	
+	 final int VACIO = 0;
+	 final int MINA = 1;
+	 final int TESORO = 2;
+	 final int INTENTO = 3;
+	
+	int [][] cuadrante= new int [5][4];
+	int x=0, y=0;
+	for (int i=0; i<cuadrante.length;i++){
+		for (int j=0; j<cuadrante[0].length;j++) {
+			cuadrante[i][j]=VACIO;
+		}
+	}
+	// COLOCANDO LA MINA
+			int minaX=(int)(Math.random()*cuadrante.length);
+			int minaY=(int)(Math.random()*cuadrante[0].length);
+			cuadrante [minaX][minaY]=MINA;
+			
+	//COLOCANDO EL TESORO (NO PUEDE COINCIDIR CON LA MINA!!)
+			int tesoroX, tesoroY;
+			do {
+				tesoroX=(int)(Math.random()*cuadrante.length);
+				tesoroY=(int)(Math.random()*cuadrante[0].length);
+			}while(tesoroX==minaX && tesoroY==minaY);
+			cuadrante[tesoroX][tesoroY]=TESORO;
+			
+			
+		//comienza el juego
+		System.out.println("Que empiece la busqueda");
+		int oportunidades=6;
+		int salir=0;
+		do {
+			for (int i=0;i<cuadrante.length;i++) {
+				for(int j=0; j< cuadrante[0].length;j++) {
+					System.out.print("   |");
+					if(cuadrante[i][j]==VACIO) {
+						System.out.print("X");
+					}else {
+						System.out.print(" ");
+					}
+				} System.out.println();
+			}
+			System.out.println("Coordenadas X");
+		int	 i=e.nextInt();
+			
+			System.out.println("Coordenadas Y");
+		int	 j=e.nextInt();
+			
+		}while(salir!=1);
+}// fin ejercicio7
+
+
+
 	
 } //fin de la calse principal
 
@@ -287,4 +397,4 @@ public void ej5() {
 
 
 
-}// fin de la clase
+
