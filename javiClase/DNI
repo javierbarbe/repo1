@@ -1,0 +1,105 @@
+package trimestre2;
+import java.util.*;
+public class Dni {
+	
+	//atributos 
+	private int numDni=0;
+	Scanner e=new Scanner(System.in);
+	private String Nif="";
+	private static final String letrasNif="TRWAGMYFPDXBNJZSQVHLCKE";
+	char letra;
+	
+	public void setDni(int dniNumero) {
+		this.numDni=dniNumero;
+	}
+	public int obtenerDni() {
+		return this.numDni;
+	}
+	public String obtenerNIF() {
+		char letra=calcularLetraNIF(numDni);
+		return Integer.toString(numDni)+letra;
+	}
+	
+	private static char calcularLetraNIF(int dni) {
+		char letra=(letrasNif.charAt(dni%23));
+		return letra;
+		}
+	
+	private static char extraerLetraNif( String nif) {
+		char letra= nif.charAt(nif.length()-1);
+		return letra;
+	}
+	
+	private static int extraerNumDni(String nif) {
+		int num= Integer.parseInt(nif.substring(0, nif.length()-1));
+		return num;
+	}
+	
+	private boolean validarNIF( String nif) {
+		boolean valido =true;
+		int num=extraerNumDni(nif);
+		char letra= extraerLetraNif(nif);
+		if(nif==null) {
+			valido=false;
+		}
+		else {
+			if(letra==calcularLetraNIF(num)) {
+				valido=true;
+			}else {
+				valido=false;
+			}
+		}
+		return valido;
+	}
+	
+	public void establecer (String nif) throws Exception{
+		if (validarNIF(nif)==true) {
+			this.numDni=Dni.extraerNumDni(nif);
+		}else {
+			throw new Exception ("Nif no valido "+ nif);
+		}
+	}
+	// esto es lo mio previo
+	public Dni() {
+		System.out.println("Introduce tu  dni ");
+		numDni=e.nextInt();
+		while(numDni<0 || numDni>99999999) {
+				System.out.println("Introduce un dni valido");
+				numDni=e.nextInt();
+		}
+		System.out.println(numDni);
+		letra=letrasNif.charAt(numDni%23);
+		System.out.println("tu letra es "+ letra);
+		
+	}
+	public String getNif() {
+		String numDni2=Integer.toString(numDni);
+		Nif=numDni2+"-"+letra;
+		return "tu Nif es "+Nif;
+	}
+	public void setNif(String nif) {
+		Nif = nif;
+	}
+
+	public void  validaNif(String nif) {
+		
+		this.Nif=nif;
+		String Dni=this.Nif.substring(0,this.Nif.length()-1);
+		System.out.println("esto es tu dni sin letra "+Dni);
+		char letraDni=nif.charAt(nif.length()-1);
+		String letraDniString=String.valueOf(letraDni);  
+		System.out.println("esto es letra Dni que tu has introducido "+ letraDni);
+		int digitosDni=Integer.parseInt(Dni);
+		letra=letrasNif.charAt(digitosDni%23);
+		String letraString= String.valueOf(letra);  
+		if(letraDniString.equalsIgnoreCase(letraString)) {
+	
+		 System.out.println("la letra coincide con la de tu dni");
+		 
+		}else{
+			System.out.println("la letra no corresponde con tu dni");
+			System.out.println("ese dni tiene por letra "+letraString);
+		}
+	// return "la letra coincide con la que deberia ser: "+ letraDniString +" \ntu nif es: " +nif;
+	}
+}
