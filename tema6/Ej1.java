@@ -1,14 +1,14 @@
 package tema6;
 
 public class Ej1 {
-	/*crea una clase que cuente el numero de vocales introducidas en una cadena de textoÁ
+	/*crea una clase que cuente el numero de vocales introducidas en una cadena de texto√ß
 	 * por teclado, independientemente de que sean mayusculas, minusculas o tengan acento
 	 */
  //atributos
 	String palabra;
 	char letra;
 	int numVocales=0;
-	char vocales []= new char []{'a','e','i','o','u','A','E','I','O','U','¡','…','Õ','”','⁄','·','È','Ì','Û','˙'};
+	char vocales []= new char []{'a','e','i','o','u','A','E','I','O','U','√Å','√â','√ç','√ì','√ö','√°','√©','√≠','√≥','√∫'};
 	
 	public Ej1(String palabra) {
 		this.palabra=palabra;
@@ -30,7 +30,7 @@ public class Ej1 {
 		 */
 		
 		char almacen[]=new char[15];
-		char abecedario []= new char[] {'a','b','c','d','e','f','g','h','i','j','k','l','m','n','Ò','o','p','q','r','s','t','u','v','w','x','y','z'};
+		char abecedario []= new char[] {'a','b','c','d','e','f','g','h','i','j','k','l','m','n','√±','o','p','q','r','s','t','u','v','w','x','y','z'};
 	//int letrasFinales=0;
 	pala.toLowerCase();
 	for (int i=0;i<pala.length();i++) {
@@ -73,9 +73,69 @@ public class Ej1 {
 	
 	}// fin abecedario
 	
-	static void ordenaArrays() {
+	public class ArrayCadenas {
+
+	public static String[] primero=new String[3];
+	public static String[] segundo=new String[3];
+	
+	
+	public static String[] tercero=new String[6];
+	static String temp="";
+	
+	static void inicializaArrays(){
+			primero[0]="Zarlos";
+			primero[1]="Pepe";
+			primero[2]="Ana";
+			//return primero;
+			segundo[0]="Monica";
+			segundo[1]="Cristina";
+			segundo[2]="Jose";
+			
+			
+	}
+	public static String[] ordenaArray(String[] array) {
+		for(int j=0;j<array.length;j++) {
+			for(int i=0;i<array.length-1;i++) {
+				if(array[i].charAt(0)>array[i+1].charAt(0)) {
+					//String[]aux=new String[3];
+					temp=array[i];
+					array[i]=array[i+1];
+					array[i+1]=temp;
+				}
+			}
+		}
 		
-	} // fin de ordena Arrays
+		return array;
+	}
+	
+	public static String[] imprimeArray(String[] primero) {
+		
+		for (int i=0;i<primero.length;i++) {
+			System.out.print(primero[i]+ " ");
+		}return primero;
+	}
+	
+	
+	
+	public static String[] sumaArrays() {
+		for(int i=0;i<primero.length;i++) {
+			
+				tercero[i]=primero[i];
+			
+		}int p=3;	
+		while (p<tercero.length) {
+				for(int q=0;q<segundo.length;q++) {
+					
+						tercero[p]=segundo[q];
+						p++;
+			//
+				}
+		}
+		return tercero;
+	}
+	
+	
+}
 	
 	
 	
