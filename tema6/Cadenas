@@ -1,0 +1,36 @@
+package trimestre2;
+
+public class ManipularCadenas {
+
+	char []arrayCar;
+	public ManipularCadenas() {};
+	
+	public char[] construyeCadena(int tamanio) {
+		this.arrayCar=new char[tamanio+1];
+		for (int i=0;i<arrayCar.length;i++) {
+			arrayCar[i]='a';
+		}
+		return arrayCar;
+	}
+	
+	public void constructorCopia (ManipularCadenas cad) {
+		this.arrayCar=cad.arrayCar;
+	}
+	public char[] leerCadena(char[] cadena) {
+		for(int i=0;i<arrayCar.length;i++) {
+			System.out.print(arrayCar[i]+" ");
+		}
+		arrayCar[arrayCar.length-1]='7';
+		return this.arrayCar;
+	}
+	public char[] escribeCadena(char[] culo) {
+		
+		this.arrayCar=culo;
+		/*for(int i=0;i<culo.length;i++) {
+			System.out.print(culo[i]+" ");
+		}*/
+		
+		return culo;
+	}
+	
+}
