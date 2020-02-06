@@ -1,0 +1,19 @@
+package trimestre2;
+
+public class PruebaManipulaCadenas {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		
+		ManipularCadenas una= new ManipularCadenas();
+		//una.construyeCadena(6);
+		//una.leerCadena();
+	
+		char[] ole= una.construyeCadena(3);
+		System.out.println(una.escribeCadena(ole));
+		una.leerCadena(ole);
+		System.out.println(una.escribeCadena(ole));
+	}
+
+}
