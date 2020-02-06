@@ -23,7 +23,26 @@ public class Ej1 {
 		} System.out.println("Tu palabra tiene "+ numVocales+ " vocales" );
 	}
 	
+	public void conteoJuanma(String pala) {
+	int contador []= new int [27];
 	
+		for (int i=0;i<pala.length();i++) {
+			char letra=pala.charAt(i);
+
+			for (int j=0;j<abecedario.length;j++) {
+				if(letra==abecedario[j]) {
+					contador[j]++;
+				}
+			}
+		}
+		 for (int q=0;q<abecedario.length;q++) {
+			 if(contador[q]!=0) {
+			 System.out.println("de la letra "+abecedario[q]+" hay "+contador[q]);
+			 }
+		 }
+		}
+
+
 	public void abecedario(String pala) {
 		/*metodo que te diga cuantas veces se repite cada
 		 * letra en tu String
