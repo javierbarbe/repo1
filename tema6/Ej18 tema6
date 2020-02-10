@@ -1,0 +1,61 @@
+package trimestre2;
+
+public class ArraysEj18 {
+
+	public ArraysEj18() {
+
+	}
+
+	int[] numeros;
+
+	public int[] genera() {
+
+		numeros = new int[10];
+		for (int i = 0; i < numeros.length; i++) {
+			numeros[i] = (int) (Math.random() * 200 + 1);
+		}
+		imprimeArray(numeros);
+		return numeros;
+	}
+
+	public int[] imprimeArray(int[] recibido) {
+
+		for (int i = 0; i < recibido.length; i++) {
+			System.out.print(recibido[i] + " ");
+		}
+		return recibido;
+	}
+	
+	public int [] coloca (int[] recibido) {
+		int [] fina= new int [recibido.length];
+		int [] mayores= new int [recibido.length];
+		int [] menores=new int [recibido.length];
+		int cuentaMenores=0;
+		int cuentaMayores=0;
+		
+		for (int i=0;i<recibido.length;i++) {
+			if(recibido[i]<=100) {
+				menores[cuentaMenores]=recibido[i];
+				cuentaMenores++;
+			}else {
+				mayores[cuentaMayores]=recibido[i];
+				cuentaMayores++;
+			}
+		}
+		
+		int menoresColocados=0;
+		int mayoresColocados=0;
+		int i =0;
+		while  (i<fina.length) {
+			if(menoresColocados<cuentaMenores) {
+				fina[i++]=menores[menoresColocados++];
+			}
+			if(mayoresColocados<cuentaMayores) {
+				fina[i++]=mayores[mayoresColocados++];
+			}
+		}
+		imprimeArray(fina);
+		return recibido;
+	}
+	
+	
