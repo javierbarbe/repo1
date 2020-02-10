@@ -1,36 +1,83 @@
 package tema6;
 
 public class ArrayCadenas {
+	public  static String[] primero=new String[3];
+	public  static String[] segundo=new String[3];
 	
+	
+	public static String[] tercero=new String[6];
+	static String temp="";
 	
 	//inicializando Arrays
-	 static String  cad1[]=new String [3];
-	 static String cad2[]=new String [3];
-	 static String cad3[]=new String[3];
+	 static StringBuilder cad1[]=new StringBuilder [3];
+	 static StringBuilder cad2[]=new StringBuilder [3];
+	 static StringBuilder cad3[]=new StringBuilder [3];
 	static void creaCadenas() {
-		cad1[0]= "aepe";
-		cad1[1]="pna";
-		cad1[2]="carlos";
-		cad2[0]="Cristina";
-		cad2[1]="Monica";
-		cad2[2]="Estefania";
+		cad1[0]=new StringBuilder("marta");
+		cad1[1]=new StringBuilder("paula");
+		cad1[2]=new StringBuilder("Carlos");
+		cad2[0]=new StringBuilder("Cristina");
+		cad2[1]=new StringBuilder("Veronica");
+		cad2[2]=new StringBuilder("Estefania");
 	}
 	
 	
-	static void ordenaCadenas() {
-		for (int j=cad3.length-1;j>=0;j--) {
-			for(int i=cad1.length-1;i>0;i--) {
-				if(cad1[i].charAt(0)>cad1[i-1].charAt(0)) {
-					cad3[j]=cad1[i];
-				}else {
-					cad3[j]=cad1[i-1];
+	
+		
+		
+		
+		static void inicializaArrays(){
+				primero[0]="Zarlos";
+				primero[1]="Pepe";
+				primero[2]="Ana";
+				//return primero;
+				segundo[0]="Monica";
+				segundo[1]="Cristina";
+				segundo[2]="Jose";
+				
+				
+		}
+		public static String[] ordenaArray(String[] array) {
+			for(int j=0;j<array.length;j++) {
+				for(int i=0;i<array.length-1;i++) {
+					if(array[i].charAt(0)>array[i+1].charAt(0)) {
+						//String[]aux=new String[3];
+						temp=array[i];
+						array[i]=array[i+1];
+						array[i+1]=temp;
+					}
 				}
 			}
+			
+			return array;
+		}
 		
+		public static String[] imprimeArray(String[] primero) {
+			
+			for (int i=0;i<primero.length;i++) {
+				System.out.print(primero[i]+ " ");
+			}return primero;
 		}
-		for (String a: cad3) {
-			System.out.print(a+" ");
-		}
+		
+		
+		
+		public static String[] sumaArrays() {
+			for(int i=0;i<primero.length;i++) {
+				
+					tercero[i]=primero[i];
+				
+			}int p=3;	
+			while (p<tercero.length) {
+					for(int q=0;q<segundo.length;q++) {
+						
+							tercero[p]=segundo[q];
+							p++;
+				//
+					}
+			}
+			return tercero;
+		
+		
 	}//fin de ordenaCadenas
 	
 	
