@@ -1,0 +1,19 @@
+package trimestre2;
+
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+public class PatronesIp {
+
+	//Pattern ip= Pattern.compile("([0-2]?[0-5]{0-2}\\.){3}[0-2]?[0-5]{0-2}");
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Pattern ip= Pattern.compile("(([1]?[1-9]?[0-9]|2[0-4]\\d |25[0-5])\\.){3}([1]?[1-9]?[0-9]|2[0-4]\\\\d |25[0-5])");
+		Matcher m=ip.matcher("89.25.20.50");
+		System.out.println(m.matches());
+
+	}
+
+}
