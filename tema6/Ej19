@@ -34,6 +34,17 @@ public class Ej19 {
 		int pos=e.nextInt();
 		return recibido;
 	}
+		public int [] cambiaNumero(int [] recibido) {
+		System.out.println("Que posicion quirers cambiar?");
+		int pos=e.nextInt();
+		for(int i=pos;i<recibido.length;i++) {
+			int aux=recibido[pos+1];	
+			recibido[pos+1]=recibido[pos];
+		}
+		recibido[pos]= e.nextInt();
+		
+		return recibido;
+	}
 	public static void main(String[] args) {
 		Ej19 neo= new Ej19();
 		//neo.generaNumeros();
