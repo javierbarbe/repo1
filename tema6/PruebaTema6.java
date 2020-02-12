@@ -3,11 +3,14 @@ package tema6;
 public class PruebaTema6 {
 
 	public static void main(String[] args) {
-		// TODO ApÈndice de mÈtodo generado autom·ticamente
-	//	Ej1 primer = new Ej1("cUÛolo"); 
+		// TODO Ap√©ndice de m√©todo generado autom√°ticamente
+	//	Ej1 primer = new Ej1("cU√≥olo"); 
 		//primer.abecedario("comeme la polla");
 		//ArrayCadenas.creaCadenas();
 	//	ArrayCadenas.ordenaArrays(creaCadenas);
+		SumarOrdenarArraysdeStrings hao = new SumarOrdenarArraysdeStrings();
+		hao.inicializaArrays();
+		hao.imprimeArray(hao.ordenaArray(hao.sumaArrays()));
 		//DurodeRoer ak=new DurodeRoer();
 		//int  gol []=new int [4];
 		//ak.rellena( gol);
