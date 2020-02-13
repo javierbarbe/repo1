@@ -13,6 +13,7 @@ public class Punto {
 	        posy=y;
 	    }
 	
+	
 	    public Punto(Punto p){
 		    
 	    	this.posx = new Punto(p.getPosx());
