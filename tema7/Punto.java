@@ -18,10 +18,10 @@ public class Punto {
 	    	this.posx = new Punto(p.getPosx());
 		this.posy = new Punto(p.getPosy());
 	    }
-	    public Punto(Punto uno) {
-	    	posx=uno.getPosx();
-	    	posy=uno.getPosy();
-	    }
+	//    public Punto(Punto uno) {
+	//    	posx=uno.getPosx();
+	//    	posy=uno.getPosy();
+	//    }
 		public double getPosx() {
 			return posx;
 		}
