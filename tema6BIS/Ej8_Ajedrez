@@ -1,0 +1,22 @@
+package tema6;
+import java.util.*;
+public class Ej8 {
+	private int letras,numeros;
+	int [] [] ajedrez= new int[8][8];
+	String [] letros= {"a","b","c","d","e","f","g","h"};
+	Scanner e =new Scanner(System.in);
+	
+	public Ej8() {
+		
+	}
+	public Ej8 (Ej8 co) {
+		Ej8 un= new Ej8();
+		un=co;
+	}
+	
+	public void establecePos() {
+		System.out.println("En qué letra del tablero esta?");
+		String letra=e.next();
+		char car=letra.charAt(0);
+	}
+}
