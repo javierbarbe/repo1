@@ -15,9 +15,13 @@ public class Punto {
 	
 	
 	    public Punto(Punto p){
+		Punto q = new Punto(p.getPosx(), p.getPosy());    
+		this.posx = q.getPosx();
+		this.posy = q.getPosy();
 		    
-	    	this.posx = new Punto(p.getPosx());
-		this.posy = new Punto(p.getPosy());
+	        this.posx = p.getPosx();
+		this.posy = p.getPosy();
+	    	
 	    }
 	//    public Punto(Punto uno) {
 	//    	posx=uno.getPosx();
