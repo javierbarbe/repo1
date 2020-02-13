@@ -16,6 +16,9 @@ public class ManipularCadena {
 		char[] cadena= new char [this.tamanio];
 		return cadena;
 	}
+	
+	public ManipularCadena(){
+	}
 	public void constructorCopia( ManipularCadena un) {
 		this.tamanio=un.tamanio;
 		
