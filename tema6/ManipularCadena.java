@@ -19,7 +19,7 @@ public class ManipularCadena {
 	
 	public ManipularCadena(){
 	}
-	public void constructorCopia( ManipularCadena un) {
+	public ManipularCadena( ManipularCadena un) {
 		this.tamanio=un.tamanio;
 		
 	}
