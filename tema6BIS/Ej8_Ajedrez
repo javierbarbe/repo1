@@ -84,13 +84,13 @@ public class Ej8 {
 		}
 		System.out.println();
 		//diagonal inferior izquierda
-		for (int k=i;k>0;k--) {
+		for (int k=i;k>=0;k--) {
 			if(k==i) {
 				comodin--;
 			}else {
 				if(comodin>=0) {
 					if(k>=0) {
-						System.out.println("esto no lo pinta");
+//						System.out.println("esto no lo pinta");
 					System.out.print(letros[k]+"" +comodin+" ");
 					comodin--;
 					
@@ -104,3 +104,4 @@ public class Ej8 {
 //		}
 	}
 }
+
