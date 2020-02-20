@@ -1,0 +1,19 @@
+package tema6;
+
+public class PruebaLab {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		ArrayDouble n=new  ArrayDouble();
+		n.leerArray();
+		
+	//	ArrayDouble copia= new  ArrayDouble(n);
+		//copia.imprimeArray();
+		//copia.leerArray();
+		//copia.imprimeArray();
+		n.imprimeArray();
+		n.insertar();
+		n.imprimeArray();
+	}
+
+}
