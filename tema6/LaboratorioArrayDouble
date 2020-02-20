@@ -1,0 +1,99 @@
+package tema6;
+import java.util.*;
+public class ArrayDouble {
+Scanner e=new Scanner(System.in);
+	private double [] arrayo;
+	private int tamanio;
+	
+	
+	public  ArrayDouble () {
+		System.out.println("Introduce el tamaño del array");
+		 tamanio=e.nextInt();
+		arrayo=new double[tamanio];
+	
+	}
+	//constructor que recibe el tamaño del array
+	public ArrayDouble(int tamanio) {
+		this.tamanio=tamanio;
+		arrayo=new double[ this.tamanio];
+	}
+	//constructor copia
+//	public ArrayDouble( ArrayDouble recibido ) {
+//		//recibido.arrayo;
+//		this.arrayo = recibido.arrayo;
+//		
+//		ArrayDouble d=new ArrayDouble ();
+//		d=System.arraycopy(recibido.arrayo, 0, this.arrayo, 0, tamanio);
+//		arrayo=recibido.arrayo;
+//		for(int i=0;i<arrayo.length;i++) {
+//			//  arrayo[i]=recibido.
+//		}
+//	}
+	
+	public double[] leerArray() {
+		boolean para=false;
+		for(int i=0;i<arrayo.length;i++) {
+			if(para==false) {
+				System.out.println("introduce numero para el array");
+				arrayo[i]=e.nextDouble();
+				if (arrayo[i]==999) {
+					para=true;
+				}
+			}
+		}return arrayo;
+	
+	}
+	public  void imprimeArray() {
+		for (int i=0;i<arrayo.length;i++) {
+			System.out.print(arrayo[i]+"  " );
+		}
+		
+		
+			
+		}
+	public boolean valida() {
+		boolean sepasa=true;
+		
+		int posi=e.nextInt();
+		boolean poscorrecta=false;
+		while(poscorrecta==false) {
+			for(int i=0;i<arrayo.length;i++) {
+				if(arrayo[i]==999) {
+					System.out.println(i+" es la posicion limite");
+				
+					while(posi>i) {
+					System.out.println("posicion no ocupada, invalida");
+					System.out.println("por favor meta otra posicion");
+					//posi=e.nextInt();
+					}
+				}
+//				else {
+//					System.out.println("todo esta ocupado genial");
+//				}
+			}
+					System.out.println("Posicion correcta "+posi);
+					poscorrecta=true;
+				
+			
+				
+		}return sepasa;
+		
+	}
+	public void insertar() {
+		
+			int pos;
+		System.out.println("que posicion deseas insertar un dato?");
+		pos=e.nextInt();
+		
+		while(pos>=arrayo.length) {
+			System.out.println("esa posicion se pasa de rango");
+			System.out.println("introduce nueva posicion");
+			pos=(e.nextInt());
+		}valida();
+		
+		System.out.println("Introduce el nuevo valor a introducir en el array");
+		int nuevo=e.nextInt();
+	 arrayo[pos]=nuevo;
+	}
+	
+}
