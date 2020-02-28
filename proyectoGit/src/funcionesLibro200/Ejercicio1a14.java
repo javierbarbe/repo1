@@ -6,7 +6,7 @@ import java.util.*;
 		 Scanner e=new Scanner(System.in);
 	
 		public static void juntaNumeros(int num1, int num2) {
-		
+		fas
 				String num1s=Integer.toString(num1);
 				String num2s=Integer.toString(num2);
 				String numFinal=num1s+num2s;
