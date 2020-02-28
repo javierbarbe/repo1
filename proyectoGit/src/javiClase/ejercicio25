@@ -1,0 +1,30 @@
+ejercicio25
+
+jshell> char c ='A'
+c ==> 'A'
+
+jshell> int i =(int)c
+i ==> 65
+
+jshell> float f = 1000.34f
+f ==> 1000.34
+
+jshell> double d=
+   ...> 
+   ...> 1000.34
+d ==> 1000.34
+
+jshell> i
+i ==> 65
+
+jshell> int i=(int)f
+i ==> 1000
+
+jshell> int i=(int)d
+i ==> 1000
+
+jshell>  int i=97
+i ==> 97
+
+jshell> char c=(char)i
+c ==> 'a'

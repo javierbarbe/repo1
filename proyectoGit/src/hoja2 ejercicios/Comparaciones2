@@ -1,0 +1,9 @@
+import java.util.Scanner;
+public class Comparaciones2
+{
+	public static void main(String [] args);
+	{
+	Scanner comparacion= new Scanner
+	
+	}
+}
