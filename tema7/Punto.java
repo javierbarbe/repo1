@@ -12,21 +12,10 @@ public class Punto {
 	        posx=x;
 	        posy=y;
 	    }
-	
-	
-	    public Punto(Punto p){
-		Punto q = new Punto(p.getPosx(), p.getPosy());    
-		this.posx = q.getPosx();
-		this.posy = q.getPosy();
-		    
-	        this.posx = p.getPosx();
-		this.posy = p.getPosy();
-	    	
+	    public void constrCopia(Punto uno) {
+	    	posx=uno.getPosx();
+	    	posy=uno.getPosy();
 	    }
-	//    public Punto(Punto uno) {
-	//    	posx=uno.getPosx();
-	//    	posy=uno.getPosy();
-	//    }
 		public double getPosx() {
 			return posx;
 		}
